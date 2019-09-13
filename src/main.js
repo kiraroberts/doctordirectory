@@ -24,12 +24,8 @@ $(document).ready(function() {
       }
 
       for (let i = 0; i <body.data.length; i++) {
-        $('#getDoctorNameOutput').append(`Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}`)
+        $('#getDoctorNameOutput').append(`Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}<br>Phone Number: ${body.data[i].practices[0].phones[0].number}<br>Address: ${body.data[i].practices[0].visit_address.street}<br>Available: ${body.data[i].practices[0].accepts_new_patients}<br>About: ${body.data[i].profile.bio}<br><br><br>`)
       }
-      // body.data.forEach(function(doctor) {
-      //   $('#getDoctorNameOutput').text(`Name: ${doctor.profile.first_name} ${doctor.profile.last_name}`)
-      //   $('#getDoctorPhoneOutput').text(`Phone Number: ${doctor.practices[0].phones[0].number}`)
-      // })
     });
   });
 });
