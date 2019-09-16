@@ -18,7 +18,6 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       let body = JSON.parse(response);
-      console.log(body);
       if (body.data.length === 0) {
         $('#outputCard').text("Your search returned no results. Refine your search.")
       }
