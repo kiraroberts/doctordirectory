@@ -8,8 +8,8 @@ import './styles.css';
 $(document).ready(function() {
   $('#inputForm').submit(function(event) {
     event.preventDefault();
-    let name = $('#inputName').val();
-    let ailment = $('#inputIllness').val();
+    const name = $('#inputName').val();
+    const ailment = $('#inputIllness').val();
     $('#inputName').val("");
     $('#inputIllness').val("");
 
